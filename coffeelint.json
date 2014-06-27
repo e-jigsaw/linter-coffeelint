@@ -4,7 +4,7 @@
   },
   "arrow_spacing": {
     "name": "arrow_spacing",
-    "level": "warn"
+    "level": "ignore"
   },
   "no_tabs": {
     "name": "no_tabs",
@@ -18,8 +18,8 @@
   },
   "max_line_length": {
     "name": "max_line_length",
-    "value": 120,
-    "level": "warn",
+    "value": 80,
+    "level": "ignore",
     "limitComments": true
   },
   "line_endings": {
@@ -75,11 +75,11 @@
   },
   "no_stand_alone_at": {
     "name": "no_stand_alone_at",
-    "level": "error"
+    "level": "ignore"
   },
   "space_operators": {
     "name": "space_operators",
-    "level": "warn"
+    "level": "ignore"
   },
   "duplicate_key": {
     "name": "duplicate_key",
