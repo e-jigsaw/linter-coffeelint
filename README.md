@@ -1,7 +1,7 @@
 linter-coffeelint
 =========================
 
-This linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to [coffeelint](http://www.coffeelint.org/docs/). It will be used with files that have the “CoffeeScript” or “CoffeeScript (literate)” syntax.
+This linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to [coffeelint](http://www.coffeelint.org/). It will be used with files that have the “CoffeeScript” or “CoffeeScript (literate)” syntax.
 
 ## Installation
 Linter package must be installed in order to use this plugin. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).
@@ -15,7 +15,7 @@ $ apm install linter-coffeelint
 You can configure linter-coffeelint by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):
 ```
 'linter-coffeelint':
-  'coffeelintExecutablePath': null #coffeelint path. run 'which coffeelint' to find the path
+  'coffeelintExecutablePath': null #coffeelint path. run 'which coffeelint' to find the path to the directory that holds the executable
 ```
 
 **Note**: This plugin finds the nearest coffeelint.json file and uses the `-f` command line argument to use that file, so you may not use the `-f` argument in the linter settings.
@@ -36,3 +36,6 @@ Please note that modifications should follow these coding guidelines:
 - Vertical whitespace helps readability, don’t be afraid to use it.
 
 Thank you for helping out!
+
+## Donation
+[![Share the love!](https://chewbacco-stuff.s3.amazonaws.com/donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KXUYS4ARNHCN8)

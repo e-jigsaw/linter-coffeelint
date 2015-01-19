@@ -24,12 +24,18 @@ class LinterCoffeelint extends Linter
 
   isNodeExecutable: yes
 
+  configPath: null
+
   constructor: (editor) ->
     super(editor)
 
-    config = findFile(@cwd, ['coffeelint.json']) or path.join(__dirname, '../coffeelint.json')
-    if config
-      @cmd += " -f #{config}"
+    atom.config.observe 'linter-coffeelint.coffeelintConfigPath', =>
+      @configPath = atom.config.get 'linter-coffeelint.coffeelintConfigPath'
+
+    if configPathLocal = findFile(@cwd, ['coffeelint.json']) or path.join(__dirname, '../coffeelint.json')
+      @cmd += " -f #{configPathLocal}"
+    else if @configPath
+      @cmd += " -f #{@configPath}"
 
     atom.config.observe 'linter-coffeelint.coffeelintExecutablePath', =>
       @executablePath = atom.config.get 'linter-coffeelint.coffeelintExecutablePath'
@@ -39,5 +45,6 @@ class LinterCoffeelint extends Linter
 
   destroy: ->
     atom.config.unobserve 'linter-coffeelint.coffeelintExecutablePath'
+    atom.config.unobserve 'linter-coffeelint.coffeelintConfigPath'
 
 module.exports = LinterCoffeelint
