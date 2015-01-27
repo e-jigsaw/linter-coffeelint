@@ -55,7 +55,7 @@
   },
   "no_plusplus": {
     "name": "no_plusplus",
-    "level": "ignore"
+    "level": "warn"
   },
   "no_throwing_strings": {
     "name": "no_throwing_strings",
@@ -109,6 +109,6 @@
   },
   "non_empty_constructor_needs_parens": {
     "name": "non_empty_constructor_needs_parens",
-    "level": "warn"
+    "level": "ignore"
   }
 }
